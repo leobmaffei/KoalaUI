@@ -4,12 +4,12 @@
 
 ## Configuration:
 - Create a /Scripts folder in you project in Terminal<br>
-> mkdir Scripts<br>
-> cd Scripts/<br>
+> <code>mkdir Scripts</code><br>
+> <code>cd Scripts</code><br>
 - Inside /Scripts folder, download the GWB from apple git repo with command below.<br>
-> wget https://raw.githubusercontent.com/apple/swift/main/utils/gyb<br>
-> wget https://raw.githubusercontent.com/apple/swift/main/utils/gyb.py<br>
+> <code>wget https://raw.githubusercontent.com/apple/swift/main/utils/gyb</code><br>
+> <code>wget https://raw.githubusercontent.com/apple/swift/main/utils/gyb.py</code><br>
 - Set write permission to files.<br>
-> chmod +x gyb<br>
-> chmod +x gybpy.
+> <code>chmod +x gyb</code><br>
+> <code>chmod +x gyb.py</code>
 

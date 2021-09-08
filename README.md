@@ -15,7 +15,6 @@
 
 - In your terminal, inside /Scripts folder execute the code:
 > <code>wget https://raw.githubusercontent.com/leobmaffei/koalaUI/main/Scripts/generateTagFiles.sh</code><br>
-> <code>chmod u+x generateTagFiles.sh</code><br>
 #### The next step you can create the location wherever you want, I will demonstrate in based on root folder.
 #### Pay atention to paths if you decide to create the folder in other location
 - In Xcode criate a folder called "Design System"
@@ -39,4 +38,9 @@
 <code>${PROJECT_DIR}/DesignSystem/CodeGen/DesignSystemTokens.swift.gyb</code>
 - Insite Output Files add the path: (if you are using another path for your files, add you custom path)
 <code>${PROJECT_DIR}/DesignSystem/CodeGen/DesignSystemTokens.swift</code>
+
+
+
+
+> <code> use this only if you got permisssion error, use -> chmod u+x generateTagFiles.sh</code><br>
 

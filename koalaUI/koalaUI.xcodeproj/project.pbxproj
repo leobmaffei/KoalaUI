@@ -79,6 +79,7 @@
 				12F6893026E6C01C009C43C6 /* Sources */,
 				12F6893126E6C01C009C43C6 /* Frameworks */,
 				12F6893226E6C01C009C43C6 /* Resources */,
+				12F749B726E9592A000D5762 /* Design System Token Code Gen */,
 			);
 			buildRules = (
 			);
@@ -132,6 +133,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12F749B726E9592A000D5762 /* Design System Token Code Gen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Design System Token Code Gen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		12F6893026E6C01C009C43C6 /* Sources */ = {

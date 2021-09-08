@@ -11,6 +11,8 @@
 		12F6893A26E6C01C009C43C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F6893926E6C01C009C43C6 /* ContentView.swift */; };
 		12F6893C26E6C01F009C43C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12F6893B26E6C01F009C43C6 /* Assets.xcassets */; };
 		12F6893F26E6C01F009C43C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12F6893E26E6C01F009C43C6 /* Preview Assets.xcassets */; };
+		12F749BA26E9620B000D5762 /* DesignSystemTokens.swift.gyb in Resources */ = {isa = PBXBuildFile; fileRef = 12F749B926E9620B000D5762 /* DesignSystemTokens.swift.gyb */; };
+		12F749BC26E963A0000D5762 /* DesignSystemTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F749BB26E963A0000D5762 /* DesignSystemTokens.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		12F6893B26E6C01F009C43C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12F6893E26E6C01F009C43C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		12F6894026E6C01F009C43C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12F749B926E9620B000D5762 /* DesignSystemTokens.swift.gyb */ = {isa = PBXFileReference; lastKnownFileType = text; path = DesignSystemTokens.swift.gyb; sourceTree = "<group>"; };
+		12F749BB26E963A0000D5762 /* DesignSystemTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemTokens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 		12F6892B26E6C01C009C43C6 = {
 			isa = PBXGroup;
 			children = (
+				12F749B826E95F7E000D5762 /* DesignSystem */,
 				12F6893626E6C01C009C43C6 /* koalaUI */,
 				12F6893526E6C01C009C43C6 /* Products */,
 			);
@@ -67,6 +72,15 @@
 				12F6893E26E6C01F009C43C6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		12F749B826E95F7E000D5762 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				12F749B926E9620B000D5762 /* DesignSystemTokens.swift.gyb */,
+				12F749BB26E963A0000D5762 /* DesignSystemTokens.swift */,
+			);
+			path = DesignSystem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12F6893F26E6C01F009C43C6 /* Preview Assets.xcassets in Resources */,
+				12F749BA26E9620B000D5762 /* DesignSystemTokens.swift.gyb in Resources */,
 				12F6893C26E6C01F009C43C6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,7 +166,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${PROJECT_DIR}/Scripts/generateTagFiles.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -162,6 +177,7 @@
 			files = (
 				12F6893A26E6C01C009C43C6 /* ContentView.swift in Sources */,
 				12F6893826E6C01C009C43C6 /* koalaUIApp.swift in Sources */,
+				12F749BC26E963A0000D5762 /* DesignSystemTokens.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

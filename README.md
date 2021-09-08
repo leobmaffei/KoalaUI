@@ -17,6 +17,18 @@
 - Insert the Code below:
 > <code>${PROJECT_DIR}/Scripts/generateTagFiles.sh</code>
 - In your terminal, inside /Scripts folder execute the code:
-- 
+> <code>wget https://raw.githubusercontent.com/leobmaffei/koalaUI/main/Scripts/generateTagFiles.sh</code><br>
+> <code>chmod -x generateTagFiles.sh</code><br>
+#### The next step you can create the location wherever you want, I will demonstrate in based on root folder.
+#### Pay atention to paths if you decide to create the folder in other location
+- In Xcode criate a folder called "Design System"
+- In Design System folder create a new Empty Type file with the name "DesignSystemTokens.swift.gyb"
+> This file execute Swift + Python code to generate your tokens automatically
+- Copy and paste the code bellow into your DesignSystemTokens.swift.gyb file
+<code>Insert Code Here</code>
+- In Design System folder create a new Swift file with the name "DesignSystemTokens.swift" and let this file empty for now
+- Download my example of JSON Design System Token file and add you token hierarchy and values.
+> JSON recommended example
+> > 
 
 

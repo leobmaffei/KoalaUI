@@ -12,4 +12,11 @@
 - Set write permission to files.<br>
 > <code>chmod +x gyb</code><br>
 > <code>chmod +x gyb.py</code>
+- On your Build Phases click in the plus button
+- Select New Run Script (you can rename to easy identify the script)
+- Insert the Code below:
+> <code>${PROJECT_DIR}/Scripts/generateTagFiles.sh</code>
+- In your terminal, inside /Scripts folder execute the code:
+- 
+
 

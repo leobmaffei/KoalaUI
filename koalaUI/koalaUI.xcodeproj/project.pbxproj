@@ -13,6 +13,7 @@
 		12F6893F26E6C01F009C43C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12F6893E26E6C01F009C43C6 /* Preview Assets.xcassets */; };
 		12F749BA26E9620B000D5762 /* DesignSystemTokens.swift.gyb in Resources */ = {isa = PBXBuildFile; fileRef = 12F749B926E9620B000D5762 /* DesignSystemTokens.swift.gyb */; };
 		12F749BC26E963A0000D5762 /* DesignSystemTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F749BB26E963A0000D5762 /* DesignSystemTokens.swift */; };
+		12F749BE26E9656A000D5762 /* Design_System_Tokens.json in Resources */ = {isa = PBXBuildFile; fileRef = 12F749BD26E9656A000D5762 /* Design_System_Tokens.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		12F6894026E6C01F009C43C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12F749B926E9620B000D5762 /* DesignSystemTokens.swift.gyb */ = {isa = PBXFileReference; lastKnownFileType = text; path = DesignSystemTokens.swift.gyb; sourceTree = "<group>"; };
 		12F749BB26E963A0000D5762 /* DesignSystemTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemTokens.swift; sourceTree = "<group>"; };
+		12F749BD26E9656A000D5762 /* Design_System_Tokens.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Design_System_Tokens.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		12F749B826E95F7E000D5762 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				12F749BD26E9656A000D5762 /* Design_System_Tokens.json */,
 				12F749B926E9620B000D5762 /* DesignSystemTokens.swift.gyb */,
 				12F749BB26E963A0000D5762 /* DesignSystemTokens.swift */,
 			);
@@ -143,6 +146,7 @@
 			files = (
 				12F6893F26E6C01F009C43C6 /* Preview Assets.xcassets in Resources */,
 				12F749BA26E9620B000D5762 /* DesignSystemTokens.swift.gyb in Resources */,
+				12F749BE26E9656A000D5762 /* Design_System_Tokens.json in Resources */,
 				12F6893C26E6C01F009C43C6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

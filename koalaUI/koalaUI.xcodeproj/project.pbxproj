@@ -11,6 +11,9 @@
 		12B0534926E9800300DA63CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B0534826E9800300DA63CC /* ContentView.swift */; };
 		12B0534B26E9800400DA63CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B0534A26E9800400DA63CC /* Assets.xcassets */; };
 		12B0534E26E9800400DA63CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B0534D26E9800400DA63CC /* Preview Assets.xcassets */; };
+		12B0535826E9829600DA63CC /* DesignSystemTokens.swift.gyb in Resources */ = {isa = PBXBuildFile; fileRef = 12B0535726E9829600DA63CC /* DesignSystemTokens.swift.gyb */; };
+		12B0535A26E982D700DA63CC /* DesignSystemTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B0535926E982D700DA63CC /* DesignSystemTokens.swift */; };
+		12B0535C26E9832700DA63CC /* Design_System_Tokens.json in Resources */ = {isa = PBXBuildFile; fileRef = 12B0535B26E9832700DA63CC /* Design_System_Tokens.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		12B0534A26E9800400DA63CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12B0534D26E9800400DA63CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		12B0534F26E9800400DA63CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12B0535726E9829600DA63CC /* DesignSystemTokens.swift.gyb */ = {isa = PBXFileReference; lastKnownFileType = text; path = DesignSystemTokens.swift.gyb; sourceTree = "<group>"; };
+		12B0535926E982D700DA63CC /* DesignSystemTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemTokens.swift; sourceTree = "<group>"; };
+		12B0535B26E9832700DA63CC /* Design_System_Tokens.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Design_System_Tokens.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +42,7 @@
 		12B0533A26E9800300DA63CC = {
 			isa = PBXGroup;
 			children = (
+				12B0535526E9826400DA63CC /* DesignSystem */,
 				12B0534526E9800300DA63CC /* koalaUI */,
 				12B0534426E9800300DA63CC /* Products */,
 			);
@@ -69,6 +76,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		12B0535526E9826400DA63CC /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				12B0535B26E9832700DA63CC /* Design_System_Tokens.json */,
+				12B0535626E9827400DA63CC /* CodeGen */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		12B0535626E9827400DA63CC /* CodeGen */ = {
+			isa = PBXGroup;
+			children = (
+				12B0535926E982D700DA63CC /* DesignSystemTokens.swift */,
+				12B0535726E9829600DA63CC /* DesignSystemTokens.swift.gyb */,
+			);
+			path = CodeGen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,6 +101,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12B0535226E9800400DA63CC /* Build configuration list for PBXNativeTarget "koalaUI" */;
 			buildPhases = (
+				12B0535D26E9838B00DA63CC /* Design System */,
 				12B0533F26E9800300DA63CC /* Sources */,
 				12B0534026E9800300DA63CC /* Frameworks */,
 				12B0534126E9800300DA63CC /* Resources */,
@@ -127,11 +153,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				12B0534E26E9800400DA63CC /* Preview Assets.xcassets in Resources */,
+				12B0535826E9829600DA63CC /* DesignSystemTokens.swift.gyb in Resources */,
+				12B0535C26E9832700DA63CC /* Design_System_Tokens.json in Resources */,
 				12B0534B26E9800400DA63CC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12B0535D26E9838B00DA63CC /* Design System */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PROJECT_DIR}/DesignSystem/CodeGen/DesignSystemTokens.swift.gyb",
+			);
+			name = "Design System";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${PROJECT_DIR}/DesignSystem/CodeGen/DesignSystemTokens.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PROJECT_DIR}/Scripts/generateTagFiles.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		12B0533F26E9800300DA63CC /* Sources */ = {
@@ -140,6 +191,7 @@
 			files = (
 				12B0534926E9800300DA63CC /* ContentView.swift in Sources */,
 				12B0534726E9800300DA63CC /* koalaUIApp.swift in Sources */,
+				12B0535A26E982D700DA63CC /* DesignSystemTokens.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

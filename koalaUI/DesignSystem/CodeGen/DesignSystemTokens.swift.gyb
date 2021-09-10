@@ -1,0 +1,24 @@
+//this file was generated
+%{
+    import json
+    jsonFile = open('../Design_System_Tokens.json')
+    jsonData = json.load(jsonFile)
+    stringContent = ""
+}%
+%{
+    def createStruct(jsonContent, identation):
+        global stringContent
+        if (isinstance(jsonContent, basestring) or isinstance(jsonContent, int)) == False:
+            for key in jsonContent.keys():
+                if (str(jsonContent[key]))[0] != "{":
+                    stringContent = stringContent + identation + "let " + key + " = " + '"' + ("%s" % jsonContent[key]) + '"' + "\n"
+                else:
+                    stringContent = stringContent + identation + "struct " + key + " {" + "\n"
+                    createStruct(jsonContent[key], (identation + "   "))
+                    stringContent = stringContent + identation + "}" + "\n"
+        return stringContent
+}%
+
+struct DesignSystem {
+${createStruct(jsonData, "   ")}
+}

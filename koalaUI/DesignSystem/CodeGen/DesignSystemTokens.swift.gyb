@@ -11,7 +11,13 @@
         if (isinstance(jsonContent, basestring) or isinstance(jsonContent, int)) == False:
             for key in jsonContent.keys():
                 if (str(jsonContent[key]))[0] != "{":
-                    stringContent = stringContent + identation + "let " + key + " = " + '"' + ("%s" % jsonContent[key]) + '"' + "\n"
+
+                    if(str(jsonContent[key])[0] == "#" ):
+                        stringContent = stringContent + identation + "let " + key + " = " + '"' + ("%s" % jsonContent[key]) + '"' + "\n"
+                    else:
+                        stringContent = stringContent + identation + "let " + key + " = " + ("%s" % jsonContent[key]) + "\n"
+
+
                 else:
                     stringContent = stringContent + identation + "struct " + key + " {" + "\n"
                     createStruct(jsonContent[key], (identation + "   "))

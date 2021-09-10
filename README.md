@@ -40,30 +40,7 @@
 <code>${PROJECT_DIR}/DesignSystem/CodeGen/DesignSystemTokens.swift</code>
 - Congrats, now your setuoo is done. You can test by writing ssometing in the DesignSystemTokens.swift.gyb file, saving and cheching the DesignSystemTokens.swift file. If the text appears there, the configuration was succeeded.
 - Now, copy this code bellow and paste in DesignSystemTokens.swift.gyb (please be careful with the code identation python will not work with wrong identation)
-<code>//this file was generated
-%{
-    import json
-    jsonFile = open('../Design_System_Tokens.json')
-    jsonData = json.load(jsonFile)
-    stringContent = ""
-}%
-%{
-    def createStruct(jsonContent, identation):
-        global stringContent
-        if (isinstance(jsonContent, basestring) or isinstance(jsonContent, int)) == False:
-            for key in jsonContent.keys():
-                if (str(jsonContent[key]))[0] != "{":
-                    stringContent = stringContent + identation + "let " + key + " = " + '"' + ("%s" % jsonContent[key]) + '"' + "\n"
-                else:
-                    stringContent = stringContent + identation + "struct " + key + " {" + "\n"
-                    createStruct(jsonContent[key], (identation + "   "))
-                    stringContent = stringContent + identation + "}" + "\n"
-        return stringContent
-}%
-
-struct DesignSystem {
-${createStruct(jsonData, "   ")}
-}<\code>
+<code>https://github.com/leobmaffei/koalaUI/blob/main/koalaUI/DesignSystem/CodeGen/DesignSystemTokens.swift.gyb<\code>
 
 
 

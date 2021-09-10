@@ -43,7 +43,5 @@
 <code>https://github.com/leobmaffei/koalaUI/blob/main/koalaUI/DesignSystem/CodeGen/DesignSystemTokens.swift.gyb<\code>
 
 
-
-
->> <code> use this only if you got permisssion error when build project, use -> chmod u+x generateTagFiles.sh</code><br>
+> Use this only if you got permisssion error when build project, use: <code>chmod u+x generateTagFiles.sh</code>
 

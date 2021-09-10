@@ -46,9 +46,6 @@
 - Your run script needs to look like this:
 > ![Copy Item](/Assets/run_script.png "run_script")
 - Congrats, now your setup is done. You can test by writing ssometing in the DesignSystemTokens.swift.gyb file, saving and cheching the DesignSystemTokens.swift file. If the text appears there, the configuration was succeeded.
-- Now, copy this code bellow and paste in DesignSystemTokens.swift.gyb (please be careful with the code identation python will not work with wrong identation)<br>
-<code> https://github.com/leobmaffei/koalaUI/blob/main/koalaUI/DesignSystem/CodeGen/DesignSystemTokens.swift.gyb </code>
-
 
 > Use this only if you got permisssion error when build project, use: <code>chmod u+x generateTagFiles.sh</code>
 

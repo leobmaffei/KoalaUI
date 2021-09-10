@@ -15,17 +15,16 @@
 
 - In your terminal, inside /Scripts folder execute the code:
 > <code>wget https://raw.githubusercontent.com/leobmaffei/koalaUI/main/Scripts/generateTagFiles.sh</code><br>
-> <code>chmod u+x generateTagFiles.sh</code><br>
-#### The next step you can create the location wherever you want, I will demonstrate in based on root folder.
+#### In the next step you can create your folders in location wherever you want, I will demonstrate in based on root folder.
 #### Pay atention to paths if you decide to create the folder in other location
-- In Xcode criate a folder called "Design System"
+- In Xcode criate a folder called "DesignSystem"
 - In Design System folder create a new Folder with name "CodeGen"
 - In CodeGen folder create a new Empty Type file with the name "DesignSystemTokens.swift.gyb"
 > This file execute Swift + Python code to generate your tokens automatically
 - Copy and paste the code bellow into your DesignSystemTokens.swift.gyb file
 <code>Insert Code Here</code>
-- In Design System folder create a new Swift file with the name "DesignSystemTokens.swift" and let this file empty for now
-- Download my example of JSON Design System Token file and add you token hierarchy and values.
+- In DesignSystem/CodeGen folder create a new Swift file with the name "DesignSystemTokens.swift" and let this file empty for now
+- Download my example of JSON Design System Token file and add to DesignSystem. folder. Fell free to change the token hierarchy and values.
 > JSON recommended example
 > > https://github.com/leobmaffei/koalaUI/blob/main/koalaUI/DesignSystem/Design_System_Tokens.json
 - Insert the json file in the Design System folder selecting "Copy files if Needed"
@@ -39,4 +38,10 @@
 <code>${PROJECT_DIR}/DesignSystem/CodeGen/DesignSystemTokens.swift.gyb</code>
 - Insite Output Files add the path: (if you are using another path for your files, add you custom path)
 <code>${PROJECT_DIR}/DesignSystem/CodeGen/DesignSystemTokens.swift</code>
+- Congrats, now your setuoo is done. You can test by writing ssometing in the DesignSystemTokens.swift.gyb file, saving and cheching the DesignSystemTokens.swift file. If the text appears there, the configuration was succeeded.
+
+
+
+
+> <code> use this only if you got permisssion error, use -> chmod u+x generateTagFiles.sh</code><br>
 

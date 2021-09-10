@@ -40,7 +40,7 @@
 <code>${PROJECT_DIR}/DesignSystem/CodeGen/DesignSystemTokens.swift</code>
 - Congrats, now your setuoo is done. You can test by writing ssometing in the DesignSystemTokens.swift.gyb file, saving and cheching the DesignSystemTokens.swift file. If the text appears there, the configuration was succeeded.
 - Now, copy this code bellow and paste in DesignSystemTokens.swift.gyb (please be careful with the code identation python will not work with wrong identation)
-<code>https://github.com/leobmaffei/koalaUI/blob/main/koalaUI/DesignSystem/CodeGen/DesignSystemTokens.swift.gyb<\code>
+<code> https://github.com/leobmaffei/koalaUI/blob/main/koalaUI/DesignSystem/CodeGen/DesignSystemTokens.swift.gyb <\code>
 
 
 > Use this only if you got permisssion error when build project, use: <code>chmod u+x generateTagFiles.sh</code>

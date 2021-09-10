@@ -36,6 +36,7 @@
 > ![Copy Item](/Assets/%20BuildPhases.png "buildPhases")
 - Select New Run Script (you can rename it, to easier identification)
 - Your run script needs to be right before "Compile Sources" otherwise you get the error "Cycle inside koalaUI; building could produce unreliable results. This usually can be resolved by moving the target's Headers build phase before Compile Sources."
+> ![Copy Item](/Assets/position.png "position")
 - Insert the Code below:
 > <code>${PROJECT_DIR}/Scripts/generateTagFiles.sh</code>
 - Inside Input Files add the path: (if you are using another path for your files, add you custom path)
@@ -43,7 +44,8 @@
 - Insite Output Files add the path: (if you are using another path for your files, add you custom path)
 <code>${PROJECT_DIR}/DesignSystem/CodeGen/DesignSystemTokens.swift</code>
 - Your run script needs to look like this:
-- Congrats, now your setuoo is done. You can test by writing ssometing in the DesignSystemTokens.swift.gyb file, saving and cheching the DesignSystemTokens.swift file. If the text appears there, the configuration was succeeded.
+> ![Copy Item](/Assets/run_script.png "run_script")
+- Congrats, now your setup is done. You can test by writing ssometing in the DesignSystemTokens.swift.gyb file, saving and cheching the DesignSystemTokens.swift file. If the text appears there, the configuration was succeeded.
 - Now, copy this code bellow and paste in DesignSystemTokens.swift.gyb (please be careful with the code identation python will not work with wrong identation)<br>
 <code> https://github.com/leobmaffei/koalaUI/blob/main/koalaUI/DesignSystem/CodeGen/DesignSystemTokens.swift.gyb </code>
 

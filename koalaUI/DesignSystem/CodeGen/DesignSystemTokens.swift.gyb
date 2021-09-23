@@ -1,9 +1,17 @@
 //this file was generated
 %{
     import json
-    jsonFile = open('../Design_System_Tokens.json')
+    import glob
+
+    pathList = []
+
+    for path in glob.iglob('../../*/Design_System_Tokens.json'):
+        pathList.append(path)
+
+    jsonFile = open(pathList[0])
     jsonData = json.load(jsonFile)
     stringContent = ""
+
 }%
 %{
     def createStruct(jsonContent, identation):
@@ -12,7 +20,7 @@
             for key in jsonContent.keys():
                 if (str(jsonContent[key]))[0] != "{":
 
-                    if(str(jsonContent[key])[0] == "#" ):
+                    if(str(jsonContent[key]).isdigit() == False ):
                         stringContent = stringContent + identation + "let " + key + " = " + '"' + ("%s" % jsonContent[key]) + '"' + "\n"
                     else:
                         stringContent = stringContent + identation + "let " + key + " = " + ("%s" % jsonContent[key]) + "\n"

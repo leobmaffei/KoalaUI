@@ -1,12 +1,9 @@
 {
   "font": {
     "brand": {
-      "head": {},
-      "body": {}
-    },
-    "product": {
-      "head": {},
-      "body": {}
+        "light": "Gill Sans-Light",
+        "medium": "Gill Sans-Medium",
+        "heavy": "Gill Sans-Bold"
     }
   },
   "color": {

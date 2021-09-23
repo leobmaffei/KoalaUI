@@ -35,16 +35,9 @@ struct DesignSystem {
    }
    struct font {
       struct brand {
-         struct body {
-         }
-         struct head {
-         }
-      }
-      struct product {
-         struct body {
-         }
-         struct head {
-         }
+         let heavy = "Gill Sans-Bold"
+         let light = "Gill Sans-Light"
+         let medium = "Gill Sans-Medium"
       }
    }
    struct spacing {
